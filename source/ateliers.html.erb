@@ -1,0 +1,38 @@
+<div class='wrapper'>
+  <div class='container'>
+    <div class='row'>
+        <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+        <h3>Créez votre activité</h3>
+          <% form_tag '/', :class => 'form-group', :method => 'post' do %>
+            <% field_set_tag do %>
+              <p>
+                <%= label_tag :categories %>
+                <%= select_tag :strategy, :options => ['cours', 'cuisine', 'sport'],
+                    :selected => 'delete', :class => 'form-control' %>
+              </p>
+              <p>
+                <%= label_tag :personnes %>
+                <%= select_tag :personnes, :options => ['1', '2', '3', '4', '5'],     :class => 'form-control' %>
+              </p>
+              <p>
+                <%= label_tag :lieu, :class => 'first' %>
+                <%= text_field_tag :lieu, :class => 'form-control' %>
+              </p>
+
+              <label for="example-datetime-local-input">Date et Heure</label>
+              <div class="col-10">
+                <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+              </div>
+              <p>
+                <%#= check_box_tag :confirm_delete %>
+              </p>
+            <% end %>
+            <% field_set_tag do %>
+              <%= submit_tag "Créer", :class => 'btn btn-primary' %>
+            <% end %>
+          <% end %>
+
+        </div>
+    </div>
+  </div>
+</div>

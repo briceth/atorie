@@ -1,0 +1,46 @@
+<div class='wrapper'>
+  <div class='container'>
+    <div class='row'>
+        <div class='col-xs-12 col-sm-6 form-user'>
+        <h3>Complétez votre profil</h3>
+          <% form_tag '/', :class => 'form-group', :method => 'post' do %>
+            <% field_set_tag do %>
+              <p>
+                <%= label_tag :prenom, :class => 'first' %>
+                <%= text_field_tag :lieu, :class => 'form-control' %>
+              </p>
+              <p>
+                <%= label_tag :nom, :class => 'first' %>
+                <%= text_field_tag :lieu, :class => 'form-control' %>
+              </p>
+              <p>
+              <label for="example-datetime-local-input">Date de naissance</label>
+              <div class="col-10">
+                <input class="form-control" type="datetime-local" value="2011-08-19T" id="example-datetime-local-input">
+              </div>
+            </p>
+            <% end %>
+            <% field_set_tag do %>
+              <%= submit_tag "ok", :class => 'btn btn-primary' %>
+            <% end %>
+          <% end %>
+
+        </div>
+
+        <div class='col-xs-12 col-sm-6 form-user-middle'>
+
+        <% form_tag '/', :class => 'form-group', :method => 'post' do %>
+        <p>
+          <%= label_tag :adresse, :class => 'first' %>
+          <%= text_field_tag :lieu, :class => 'form-control' %>
+        </p>
+        <p>
+          <%= label_tag :email, :class => 'first' %>
+          <%= text_field_tag :lieu, :class => 'form-control' %>
+        </p>
+        <% end %>
+
+        </div>
+    </div>
+  </div>
+</div>
